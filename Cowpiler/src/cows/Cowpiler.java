@@ -137,6 +137,7 @@ public class Cowpiler {
 	
 	private String process(String cowlang)
 	{
+		cowlang = cowlang.replaceAll("'''.*?'''", "");
 		cowlang = cowlang.replaceAll(" ", "");
 		return cowlang;
 	}
@@ -176,7 +177,7 @@ public class Cowpiler {
 		// TODO Auto-generated method stub
 		Cowpiler c = new Cowpiler("transpile.flipLeftRight");
 		
-		ArrayList<Action> cows = c.cowpile("Drive.Forward(12, 1.3); Drive.Left(1); Drive.TurnLeft(30); Drive.TurnRight(30); Cow(); Delay(1); ");
+		ArrayList<Action> cows = c.cowpile("'''Cowlang file''' Drive.Forward(12, 1.3); Drive.Left(1); Drive.TurnLeft(30); Drive.TurnRight(30); Cow(); Delay(1); ");
 		
 		for (Action cow : cows)
 		{
