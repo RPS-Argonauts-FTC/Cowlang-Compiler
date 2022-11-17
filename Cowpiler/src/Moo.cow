@@ -1,0 +1,20 @@
+ 
+
+
+/*
+
+On Autonomous Begin
+
+*/
+
+Delay(1);
+Drive.Forward(1, 100);
+Drive.Backward(1, 100);
+Drive.Left(1, 100);
+Drive.Right(1, 100);
+Drive.TurnLeft(90, 100);
+Drive.TurnRight(90, 100);
+Drive.SunnyPark(100);
+Claw.Open();
+Claw.Close();
+Viper.GoTo(High);
